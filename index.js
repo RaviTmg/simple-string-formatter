@@ -4,7 +4,7 @@ const formatList = (list) => {
     const { name } = listItem;
     let separator = ", ";
     if (i === 0) separator = "";
-    if (i === filtered.length - 1 && i !== 0) separator = " & ";
+    else if (i === filtered.length - 1) separator = " & ";
     return `${string}${separator}${name}`;
   }, "");
 };
